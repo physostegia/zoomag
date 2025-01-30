@@ -1,3 +1,29 @@
+<?php
+include 'server.php';
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
+
+
+$services_query = "SELECT * FROM products";
+$services_result = mysqli_query($db, $services_query);
+
+
+if ($services_result) {
+    $services = mysqli_fetch_all($services_result, MYSQLI_ASSOC);
+} else {
+    
+    echo "Error fetching services: " . mysqli_error($db);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,19 +101,24 @@
                 
                 <div class="row g-4">
                     <!-- Sample Product Card -->
+                    <?php foreach ($services as $service) : ?>
                     <div class="col-md-6 col-lg-4">
                         <div class="card product-card h-100">
                             <img src="https://placehold.co/400x300" class="card-img-top product-img" alt="Product">
                             <div class="card-body">
-                                <h5 class="card-title">Premium Dog Food</h5>
-                                <p class="card-text text-muted">High-quality nutrition for your furry friend</p>
+                                <h5 class="card-title"><?php echo $service['sku']; ?></h5>
+                                <p class="card-text text-muted"><?php echo $service['description']; ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0">$29.99</span>
-                                    <button class="btn btn-primary">Add to Cart</button>
+                                    <span class="h5 mb-0"><?php echo $service['price']; ?></span>
+                                    <form action="server.php" method="POST">
+                                    <input type="hidden" name="product" value="<?php echo $service['id']; ?>">
+                                    <button type="submit" name="add_to_cart" class="btn btn-primary" >Add to Cart</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <?php endforeach; ?>
                     <!-- More product cards would be added here -->
                 </div>
             </div>

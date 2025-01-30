@@ -1,3 +1,30 @@
+<?php
+include 'server.php';
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
+
+
+$services_query = "SELECT * FROM orders";
+$services_result = mysqli_query($db, $services_query);
+
+
+if ($services_result) {
+    $services = mysqli_fetch_all($services_result, MYSQLI_ASSOC);
+} else {
+    
+    echo "Error fetching services: " . mysqli_error($db);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

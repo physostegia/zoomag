@@ -1,0 +1,242 @@
+.standardBlock{
+    width: 1200px;
+  
+}
+.standardBlock1{
+    width: 1140px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    min-width: 1920px;
+}
+.bg-F2EFE6{
+    background-color: #F2EFE6;
+}
+.fullPageBackground{
+    width: 100%;
+    background-image: url(img/backgroundImage.png);
+    height: 768px;
+    
+}
+.mt-30px{
+    margin-top: 100px;
+}
+p{
+    
+    font-size: 14px;
+}
+.text-size25{
+    font-size: 25px;
+}
+.left{
+    float: left;
+}
+.center{
+    margin-inline: auto;
+}
+.bg-pink a{
+    
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.right{
+    float: right
+    
+}
+.logo{
+    margin-left: 100px;
+}
+.defaultButton{
+    padding: 10px;
+    width: 160px;
+    text-align: center;
+    color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+.bg-pink{
+    background-color: #F47D6E;
+  
+
+}
+.headerMenu{
+margin-inline: auto;
+margin-top: 80px;
+width: 1920px;
+border-top: solid 0.5px #D2CAA6;
+
+
+}
+
+.headerMenu li{
+    display:inline;
+    margin-inline: 60px;
+}
+
+.text-center{
+    text-align: center
+}
+.color-F27D6C{
+    color: #F27D6C;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    height: 900px;
+}
+.product-block{
+width: 360px;   
+height: 225px;
+background-color: #FFFFFF;
+margin-inline: 20px;
+border-radius: 20px;
+}
+.color-A7986B{
+color: #A7986B;
+}
+.bg-A7986B{
+    background-color: #A7986B;
+}
+.price{
+    width: 213px;
+    background-color: #FBFAF7;
+    margin-top: 59px;
+    border-radius:20px 0 20px 0;
+    border-top: solid 0.5px #dad9d6;
+    border-left: solid 1px #dad9d6;
+}
+.callNow-button{
+    
+    width: 264px;
+    color: black;
+    height: 60px;
+    border-radius: 20px;
+}
+.callNow-button a{
+    
+    color: black;
+    
+}
+.main-info{
+   
+    height: 150px;
+    width: 100%;
+    background-image: url(img/Section.png);
+}
+.main-info-after{
+    margin-top: -1px;
+    width: 100%;
+    height: 10px;
+    background-image: url(img/__after.png);
+}
+.gift-card{
+    width: 1140px;
+    height: 240px;
+    background-image: url(img/card.jpg.png);
+}
+.form-block{
+    
+    height: 417px;
+}
+.form{
+    width: 620px;
+    height: 410px;
+    padding: 30px;
+    border-radius: 25px;
+}
+.form-pos1{
+width: 560px;
+height: 50px;
+border-radius: 30px;
+}
+.form-pos2{
+    width: 225px;
+    height: 50px;
+    border-radius: 30px;
+}
+.form-pos3{
+    width: 320px;
+    height: 50px;
+    border-radius: 30px;
+}
+.form-info{
+    width: 620px;
+    height: 56px;
+    margin-bottom: -50px;
+}
+.gg{
+    width: 560px;
+    height: 50px;
+}
+.form-info-price{
+width: 284px;
+}
+.form-info-price h6{
+    color: #433E28;
+}
+.form-button{
+    width: 270px;
+    height: 51px;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 12px;
+}
+.form-svg{
+    background-image: url(img/form-svg.png);
+    height: 417px;
+    width: 479px;
+}
+.input-element{
+    width: 360px;
+    height: 60px;
+    border-radius: 30px;
+    border: solid #433E29 1.5px;
+    margin-inline: 10px;
+}
+.section{
+    background-image: url(img/saaaaaaaaa.png);
+    width: 1800px;
+    height: 810px;
+}
+footer{
+    width: 100%;
+    border-top: solid 0.5px #D2CAA6;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
